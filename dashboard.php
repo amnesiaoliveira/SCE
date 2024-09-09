@@ -96,7 +96,7 @@
             align-items: center;
             font-size: 0.8em;
         }
-        .footer .user-info {
+        .footer .version {
             position: absolute;
             left: 20px;
             display: flex;
@@ -128,20 +128,8 @@
         <!-- O conteúdo da página será exibido aqui -->
     </div>
     <div class="footer">
-        <div class="user-info">
-            <?php
-                // Iniciar a sessão apenas se ainda não estiver ativa
-                if (session_status() === PHP_SESSION_NONE) {
-                    session_start();
-                }
-                // Verificar se o usuário está logado
-                if (isset($_SESSION['username'])) {
-                    $username = htmlspecialchars($_SESSION['username']);
-                } else {
-                    $username = 'Usuário';
-                }
-            ?>
-            <span>Usuário: <?php echo $username; ?></span>
+        <div class="version">
+            <span>versão 1.0</span>
         </div>
         <span>Developed by Eugenio Oliveira</span>
     </div>

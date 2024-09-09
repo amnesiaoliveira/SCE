@@ -104,7 +104,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     </style>
 </head>
 <body>
-    <?php include('dashboard.php'); ?> <!-- Inclui o menu lateral -->
+    <?php include('dashboard.php'); ?>
 
     <div class="container">
         <h2>Cadastro de Produtos</h2>

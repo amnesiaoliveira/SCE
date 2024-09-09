@@ -190,7 +190,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <div class="print-container">
                 <button class="print-button" onclick="window.print();">Imprimir Relatório</button>
 
-                <h3>Relatório de Entradas</h3>
+                <h3>Entradas</h3>
                 <?php if (!empty($entradas)): ?>
                     <table>
                         <thead>
@@ -222,7 +222,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     <p>Não há entradas registradas para o período selecionado.</p>
                 <?php endif; ?>
 
-                <h3>Relatório de Saídas</h3>
+                <h3>Saídas</h3>
                 <?php if (!empty($saidas)): ?>
                     <table>
                         <thead>

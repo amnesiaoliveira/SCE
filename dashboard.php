@@ -106,7 +106,8 @@
 </head>
 <body>
     <div class="navbar">
-        <a href="dashboard.php"><h1>SCE</h1></a>
+        <a href="dashboard.php"><img src="img/LOGO.png" alt="Descrição da Foto" width="50" height="25" title="Início" />
+        </a>
         <ul>
             <li><a href="entrada.php">Entrada</a></li>
             <li><a href="saida.php">Saída</a></li> 

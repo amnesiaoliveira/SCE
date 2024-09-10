@@ -30,6 +30,7 @@
             justify-content: space-between;
             align-items: center;
             z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);/*efeito de sombra*/
         }
         .navbar h1 {
             margin: 0;
@@ -49,10 +50,12 @@
             color: #fff;
             padding: 10px 15px;
             display: block;
-            transition: background-color 0.3s ease;
+            transition: background-color 0.3s ease;          
         }
         .navbar a:hover {
             background-color: #079DC2;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);/*efeito de sombra*/
+            
         }
         .dropdown {
             position: relative;
@@ -63,7 +66,7 @@
             top: 100%;
             left: 0;
             background-color: #005073;
-            box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+            box-shadow: 0px 8px 16px rgba(0,0,0,0.2);/*efeito de sombra*/
             z-index: 1000;
         }
         .dropdown-content a {
@@ -95,6 +98,8 @@
             justify-content: center;
             align-items: center;
             font-size: 0.8em;
+            box-shadow: 0 2px 90px rgba(0, 0, 0, 0.8);/*efeito de sombra*/
+            
         }
         .footer .version {
             position: absolute;

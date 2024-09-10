@@ -89,6 +89,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             border: none;
             border-radius: 4px;
             cursor: pointer;
+            box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
         }
         input[type="submit"]:hover {
             background-color: #005073;
@@ -105,6 +106,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             cursor: pointer;
             font-size: 16px;
             margin-bottom: 20px;
+            box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
         }
         .print-button:hover {
             background-color: #005073;

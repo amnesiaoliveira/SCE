@@ -7,7 +7,7 @@ if (!isset($_SESSION['username'])) {
     header('Location: index.php');
     exit();
 }
-
+ 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // Configurações do backup
     $backup_file = 'backup_' . date('Y-m-d_H-i-s') . '.sql';

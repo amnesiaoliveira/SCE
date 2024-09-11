@@ -11,15 +11,10 @@ if (!isset($_SESSION['username'])) {
 $estoque = [];
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    // Consultar produtos
+    // Consultar produtos e suas quantidades em estoque
     $query_estoque = "
-        SELECT p.codigo, p.nome, p.quantidade AS quantidade_estoque, 
-               COALESCE(SUM(e.quantidade), 0) AS quantidade_entradas, 
-               COALESCE(SUM(s.quantidade), 0) AS quantidade_saidas
-        FROM produtos p
-        LEFT JOIN entradas e ON p.codigo = e.codigo
-        LEFT JOIN saidas s ON p.codigo = s.codigo
-        GROUP BY p.codigo, p.nome, p.quantidade
+        SELECT codigo, nome, quantidade AS quantidade_estoque
+        FROM produtos
     ";
 
     $result_estoque = mysqli_query($conn, $query_estoque);
@@ -136,7 +131,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     </style>
 </head>
 <body>
-    <?php include('dashboard.php'); ?> <!-- Inclui o menu lateral -->
+    <?php include('dashboard.php'); ?>
 
     <div class="container">
         <h2>Relatório de Estoque</h2>
@@ -157,8 +152,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                             <th>Código</th>
                             <th>Nome</th>
                             <th>Quantidade em Estoque</th>
-                            <th>Entradas</th>
-                            <th>Saídas</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -167,8 +160,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                 <td><?php echo htmlspecialchars($item['codigo']); ?></td>
                                 <td><?php echo htmlspecialchars($item['nome']); ?></td>
                                 <td><?php echo htmlspecialchars($item['quantidade_estoque']); ?></td>
-                                <td><?php echo htmlspecialchars($item['quantidade_entradas']); ?></td>
-                                <td><?php echo htmlspecialchars($item['quantidade_saidas']); ?></td>
                             </tr>
                         <?php endforeach; ?>
                     </tbody>

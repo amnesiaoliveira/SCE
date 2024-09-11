@@ -113,7 +113,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             border-radius: 4px;
             cursor: pointer;
             font-size: 14px; /* Ajustado o tamanho da fonte do botão de envio */
-            box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
         }
         input[type="submit"]:hover {
             background-color: #005073;

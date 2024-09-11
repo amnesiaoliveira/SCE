@@ -98,7 +98,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             border: none;
             border-radius: 4px;
             cursor: pointer;
-            box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
             flex-basis: 100%; /* Faz com que o botão ocupe toda a largura disponível */
         }
         input[type="submit"]:hover {

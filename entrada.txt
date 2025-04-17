@@ -1,0 +1,73 @@
+### Backlog para o Algoritmo de Entrada de Produtos
+
+#### **1. Autenticação e Sessão**
+- [ ] Verificar se o usuário está autenticado (verificar `$_SESSION['username']`).
+- [ ] Redirecionar para a página de login (`index.php`) caso o usuário não esteja autenticado.
+
+#### **2. Processamento de Formulário**
+- [ ] Verificar se o método da requisição é `POST`.
+- [ ] Capturar os dados enviados pelo formulário:
+    - Código do produto.
+    - Nome do produto.
+    - Quantidade.
+    - Data de lançamento.
+    - Número do lote.
+    - Data de fabricação.
+    - Validade.
+- [ ] Registrar a entrada do produto no banco de dados (`entradas`).
+    - Criar a query de inserção.
+    - Executar a query e tratar erros.
+- [ ] Atualizar a quantidade do produto no banco de dados (`produtos`).
+    - Criar a query de atualização.
+    - Executar a query e tratar erros.
+- [ ] Exibir mensagem de sucesso caso a operação seja concluída.
+
+#### **3. Interface do Usuário**
+- [ ] Criar um formulário para entrada de produtos com os seguintes campos:
+    - Código ou nome do produto (com autocomplete).
+    - Nome do produto (somente leitura).
+    - Quantidade.
+    - Data de lançamento.
+    - Número do lote.
+    - Data de fabricação.
+    - Validade.
+- [ ] Adicionar botão de envio para registrar a entrada.
+- [ ] Exibir mensagem de sucesso após o registro.
+
+#### **4. Estilização**
+- [ ] Aplicar estilos para:
+    - Layout responsivo.
+    - Campos do formulário.
+    - Botão de envio.
+    - Mensagem de sucesso.
+
+#### **5. Funcionalidade de Autocomplete**
+- [ ] Implementar a funcionalidade de busca de produto por código:
+    - Criar uma requisição AJAX para buscar o nome do produto.
+    - Atualizar o campo "Nome do Produto" com o resultado da busca.
+    - Exibir mensagem de erro caso o produto não seja encontrado.
+
+#### **6. Integração**
+- [ ] Incluir o menu lateral (`dashboard.php`).
+- [ ] Configurar os ícones e favicon.
+
+#### **7. Validação**
+- [ ] Validar os campos do formulário no lado do cliente (HTML5).
+- [ ] Validar os dados no lado do servidor antes de inserir no banco de dados.
+
+#### **8. Segurança**
+- [ ] Proteger contra SQL Injection:
+    - Usar prepared statements para as queries.
+- [ ] Validar e sanitizar os dados recebidos do formulário.
+- [ ] Proteger contra ataques XSS:
+    - Escapar os dados exibidos no HTML.
+
+#### **9. Testes**
+- [ ] Testar o fluxo completo de registro de entrada.
+- [ ] Testar a funcionalidade de autocomplete.
+- [ ] Testar mensagens de erro e sucesso.
+- [ ] Testar a interface em diferentes dispositivos e navegadores.
+
+#### **10. Documentação**
+- [ ] Documentar o código para facilitar a manutenção.
+- [ ] Criar instruções para configurar e executar o sistema.

@@ -1,0 +1,58 @@
+Backlog para Cadastro de Produtos:
+
+1. **Autenticação de Usuário**
+    - Verificar se o usuário está autenticado (sessão ativa).
+    - Redirecionar para a página de login caso o usuário não esteja autenticado.
+
+2. **Conexão com o Banco de Dados**
+    - Incluir o arquivo de configuração para conexão com o banco de dados.
+
+3. **Recebimento de Dados do Formulário**
+    - Capturar os dados enviados pelo formulário via método POST:
+      - Código do Produto.
+      - Nome do Produto.
+      - Categoria do Produto.
+
+4. **Validação de Dados**
+    - Verificar se o código do produto já existe no banco de dados:
+      - Caso exista, exibir mensagem de erro.
+      - Caso não exista, prosseguir para o próximo passo.
+
+5. **Inserção no Banco de Dados**
+    - Inserir os dados do produto no banco de dados:
+      - Código.
+      - Nome.
+      - Categoria.
+    - Exibir mensagem de sucesso caso a inserção seja bem-sucedida.
+    - Exibir mensagem de erro caso ocorra falha na inserção.
+
+6. **Interface do Usuário**
+    - Criar um formulário para cadastro de produtos com os seguintes campos:
+      - Código do Produto.
+      - Nome do Produto.
+      - Categoria.
+    - Adicionar botão para envio do formulário.
+
+7. **Mensagens de Feedback**
+    - Exibir mensagens de sucesso ou erro ao usuário:
+      - Mensagem de sucesso ao cadastrar o produto.
+      - Mensagem de erro caso o código já exista ou ocorra falha no banco de dados.
+
+8. **Estilização da Página**
+    - Aplicar estilos CSS para:
+      - Layout responsivo.
+      - Alinhamento do conteúdo.
+      - Estilização dos campos do formulário e botões.
+      - Exibição de mensagens de feedback.
+
+9. **Inclusão de Dashboard**
+    - Incluir o arquivo `dashboard.php` para exibir a barra lateral ou menu de navegação.
+
+10. **Favicon e Metadados**
+     - Adicionar ícones e metadados para melhorar a aparência e usabilidade da página.
+
+11. **Testes**
+     - Testar o fluxo completo de cadastro de produtos:
+        - Com código de produto único.
+        - Com código de produto duplicado.
+        - Com campos obrigatórios ausentes.
